@@ -77,7 +77,14 @@ return {
   {
     'neovim/nvim-lspconfig',
     opts = {
-      servers = { 'gopls', 'lua_ls', 'pyright', 'clangd' },
+      -- servers = { 'gopls', 'lua_ls', 'pyright', 'clangd' },
+      servers = {
+        gopls = {},
+        clangd = {},
+        lua_ls = {},
+        pyright = {},
+        rust_analyzer = {}
+      },
       signs = { Error = "", Warn = "", Hint = "", Info = "" }
     },
     config = function(_, opts)
@@ -85,10 +92,9 @@ return {
       local lsp = require('lspconfig')
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-      for _, server in ipairs(opts.servers) do
-        lsp[server].setup({
-          capabilities = capabilities
-        })
+      for server, opt in pairs(opts.servers) do
+        opts.servers[server]["capabilities"] = capabilities
+        lsp[server].setup(opt)
       end
 
       for type, icon in pairs(opts.signs) do

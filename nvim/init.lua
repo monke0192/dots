@@ -1,5 +1,3 @@
-require('opts')
-require('colours')
 if vim.g.neovide then
   require('neovide')
 end
@@ -17,5 +15,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+require('opts')
+require('colours')
 require('lazy').setup('plugins')
 require('maps')
+require('autocmds')
+

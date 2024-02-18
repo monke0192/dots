@@ -26,6 +26,7 @@ vim.api.nvim_set_hl(0, 'Directory', { fg = '#7eb2ac', italic = true })
 vim.api.nvim_set_hl(0, 'Title', { fg = '#b15c66', bold = true })
 vim.api.nvim_set_hl(0, 'ErrorMsg', { bg = '#b15c66', underline = true })
 
+vim.api.nvim_set_hl(0, 'Folded', { fg = '#e3dddf', bg = '#66585c' })
 -- cmp --
 vim.api.nvim_set_hl(0, 'CmpItemKind', { link = 'Type' })
 vim.api.nvim_set_hl(0, 'CmpItemKindFunction', { link = 'Function' })
