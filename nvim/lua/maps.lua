@@ -14,7 +14,7 @@ vim.keymap.set('n', '<C-w>n', '<C-w>j')
 vim.keymap.set('n', '<C-w>e', '<C-w>k')
 vim.keymap.set('n', '<C-w>i', '<C-w>l')
 
--- normal --> edit --
+-- normal, visual --> edit --
 vim.keymap.set('n', 't', 'i')
 vim.keymap.set('n', 'T', 'I')
 

@@ -10,6 +10,15 @@ return {
     opts = {}
   },
   {
+    "kaarmu/typst.vim",
+    ft = "typst"
+  },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {}
+  },
+  {
     'hrsh7th/nvim-cmp',
     dependencies = {
       'hrsh7th/cmp-nvim-lsp',
@@ -83,7 +92,12 @@ return {
         clangd = {},
         lua_ls = {},
         pyright = {},
-        rust_analyzer = {}
+        rust_analyzer = {},
+        typst_lsp = {
+          settings = {
+            exportPdf = "onType"
+          }
+        }
       },
       signs = { Error = "", Warn = "", Hint = "", Info = "" }
     },

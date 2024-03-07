@@ -23,3 +23,4 @@ vim.g.terminal_color_14 = '#707880'
 vim.g.terminal_color_15 = '#5b8681'
 
 vim.g.neovide_refresh_rate = 120
+vim.g.neovide_unlink_border_highlights = true
